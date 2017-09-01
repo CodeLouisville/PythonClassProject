@@ -1,20 +1,29 @@
-# Code Louisville Fall 2017 Python/Django Cohort
+# Week 1 Challenge
 
-For now the primary repo does not contain extra content as each week new content will be added to the repo as a release. At the end of the fall cohort the final project will be added to the master branch of the repo.
+Getting started with Python let's use some standard Python programming concepts such as collections and loops to construct a command line utility that we can create our Louie Pizza food menu with.
 
-# Getting Started
+## Challenge:
+Create a command line script that captures creates a menu by allowing users to add items that have a category and price.
+Users should be able to update and search and previously added items and print out the menu items ordered by category.
 
-For the fall 2017 group we will be taking the [Code Louisville May 2017 FEWD](https://github.com/CodeLouisville/May2017-FEWD-Class-Project) project and converting it to a Django Web App.
+## Tips:
+Python makes it easy to capture user input with the [built-in](https://docs.python.org/3/library/functions.html) [input()](https://docs.python.org/3/library/functions.html#input) function. 
 
-Know that please make sure to have the project downloaded for later use. It is available from the repo linked above, and has also been made available as part of this repository.
+    capture = input("What is your name?\n")
+    print(capture)
 
-Along with this having Python 3 installed day one will make sure you are able to hit the group running. Treehouse has videos available here:
+[Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) are great for Key, Value associations:
 
-[Windows]https://teamtreehouse.com/library/setting-up-a-local-python-environment-windows
-[Mac]https://teamtreehouse.com/library/setting-up-a-local-python-environment-mac
+    menu = {"Appetizers": "Jalapeno Poppers, Garlic Bread", 
+            "Pizza": "Sausage, Pepperoni"}
 
-For linux developers you should be able to apt-get or yum Python 3.
+Loop over items in a dictionary by calling the [dict.items()](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques) function in a loop
 
-For more information checkout [https://www.python.org/downloads/](https://www.python.org/downloads/) or post in the Code Louisville Python slack channel for help.
+    for k, v in menu.items():
+        print("This is the key: {0} and this is the value {0}"
+              .format(k, v))
 
-Finally I would highly encourage all developers to make use of Python Virtual Environments. This will help you develop a new best practice, and keep your project pip installs seperated from your system Python packages if you are a Mac or Linux developer. For more information on this check out the treehouse videos above or post in the Code Louisville Python Slack channel.
+Try taking the above and putting it in your Python REPL to test out how your loops, data structures and functions work before writing your scripts.
+
+## Solution
+There are a variety of ways to approach this problem in Python each with it's own merits and complexities. For one example see the menu.py solution in this project.
