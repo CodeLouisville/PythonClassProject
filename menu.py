@@ -1,6 +1,5 @@
-# activate_this = '/Users/alex/env/Scripts/bin/activate_this.py'
-# with open(activate_this) as f:
-#     exec(f.read(), {'__file__': activate_this})
+#activate_this_file = "/path/to/virtualenv/bin/activate_this.py"
+#execfile(activate_this_file, dict(__file__=activate_this_file))
     
 """
 A basic command line utility that allows somebody to create, update and output a restaurant food menu.
