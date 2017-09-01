@@ -10,11 +10,12 @@ Know that please make sure to have the project downloaded for later use. It is a
 
 Along with this having Python 3 installed day one will make sure you are able to hit the group running. Treehouse has videos available here:
 
-[Windows] https://teamtreehouse.com/library/setting-up-a-local-python-environment-windows
-[Mac] https://teamtreehouse.com/library/setting-up-a-local-python-environment-mac
+[Windows](https://teamtreehouse.com/library/setting-up-a-local-python-environment-windows)
+[Mac](https://teamtreehouse.com/library/setting-up-a-local-python-environment-mac)
 
 For linux developers you should be able to apt-get or yum Python 3.
 
 For more information checkout [https://www.python.org/downloads/](https://www.python.org/downloads/) or post in the Code Louisville Python slack channel for help.
 
 Finally I would highly encourage all developers to make use of Python Virtual Environments. This will help you develop a new best practice, and keep your project pip installs seperated from your system Python packages if you are a Mac or Linux developer. For more information on this check out the treehouse videos above or post in the Code Louisville Python Slack channel.
+
