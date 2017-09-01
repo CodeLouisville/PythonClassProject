@@ -1,0 +1,67 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Louie’s Pizza</title>
+
+    <!-- Insert Style Sheet Here-->
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/normalize.css' %}" />
+    <link rel = "stylesheet" type = "text/css" href = "{% static 'css/style.css' %}" />
+
+    <!-- Insert Google Fonts Here -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:700|Roboto:300,300i,700,700i" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <section class="header">
+        <div class="wrap">
+            <div class="row">
+                <div class="span_1_of_2"><img src="{% static 'img/louies-logo.svg' %}"></div>
+                <div class="span_1_of_2">
+                    <nav id="main-nav" role="navigation">
+                        <ul>
+                            <li><a href="\home">History</a></li>
+                            <li><a href="\menus">Menu</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="\newsletters">Newsletter</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="hero-block">
+                <h1>World's Favorite Pizza!</h1>
+                <p>Located on Clay Street, in NuLu, Louie’s Pizza is part of one of Louisville’s most lively neighborhoods. In close proximity to Downtown and near Washington Park, our NuLu pizzeria has a cool atmosphere suited for anyone looking to find a spot to hang out.</p>
+                <a href="\menus" class="hero-button">View Menu</a>
+            </div>
+        </div>
+    </section>
+    <!-- /Header -->
+    {% block content %}{% endblock content%}
+    <!-- Footer -->
+    <footer>
+        <div class="wrap">
+            <div class="row">
+            <div class="span_1_of_2">
+                <p>© Copyright 2016 Louie’s Pizza</p>
+            </div>
+            <div class="span_1_of_2">
+                <p id="privacypolicylinks">
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+                </p>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!-- Insert JavaScript Here -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/app.js' %}" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- Food Menu -->
+<section>
+    <div class="wrap">
+        <h2><span class="red">Louie's</span> Menu</h2>
+        <p>The “Hallmarks” of Louie’s of Clay St. are the coal fired brick ovens that churn out hundreds of crispy pizza’s daily. It’s a different world than it was in 1929, but we are still making the same traditional coal fired pizza in the oven that started it all back on Main Street.</p>
+        <div id="foodmenu">
+             <table class="menu">
+            {% for category in categories %}
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            <h4 class="menu-head red">{{ category.item_type }}</h4>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item in items %}
+                {% if item.item_type_id == category.id %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td class="menu-price text-right">${{ item.price }}</td>
+                    </tr>
+                {% endif %}
+                {% endfor %}
+                </tbody>
+            {% endfor %}
+            </table> 
+        </div>
+    </div>
+</section>
+<!-- /Food Menu -->
+{% endblock content %}

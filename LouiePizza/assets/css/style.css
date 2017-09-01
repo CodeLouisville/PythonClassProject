@@ -1,0 +1,249 @@
+/****** Base ******/
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    margin: 1em 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    margin: 1em 0 .5em 0;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.red {
+  color: #871719;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/****** Layout ******/
+.wrap {
+    padding: 2rem;
+}
+
+/****** Header ******/
+.header {
+  background-color: #333333;
+  background-image: url('../img/hero-bg-pizza.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+nav {
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+   display: block;
+}
+
+nav a {
+  padding: .5rem;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #871719;
+}
+
+.hero-button {
+  font-size: 1.4rem;
+  font-family: 'Roboto Slab', serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid #FFFFFF;
+  padding: 6px 12px;
+}
+
+.hero-button:hover {
+  border-color: #871719;
+  background-color: #871719;
+}
+
+
+/****** Newsletter ******/
+
+.nwsltr-label {
+    display: block;
+    margin: 0 0 16px 0;
+}
+
+.nwsltr-input {
+    display: block;
+    width: 100%;
+    border: 1px solid #c0af8e;
+    border-radius: 3px;
+    height: 40px;
+    padding: 8px;
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+}
+
+.nwsltr-btn {
+    display: block;
+    width: 100%;
+    background-color: #871719;
+    border-radius: 3px;
+    color: #FFFFFF;
+    font-family: 'Roboto Slab', serif;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 40px;
+}
+
+.nwsltr-btn:disabled {
+  opacity: .5;
+}
+
+.nwsltr-btn:hover {
+  background-color: #800080;
+}
+
+.nwsltr {
+  background-color: #E8D5B5;
+}
+
+.small-txt, .validation-message {
+  font-size: .8rem;
+}
+
+.validation-message {
+  color: #ff0000;
+  display: none;
+  margin: .5rem 0;
+}
+
+/****** Food Menu ******/
+#foodmenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#foodmenu .menu {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.menu-head {
+  text-align: left;
+}
+
+.menu-price {
+    color: #871719;
+    font-family: 'Roboto Slab', serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: right;
+}
+
+/*****Footer******/
+footer {
+    background-color: #333333;
+    color: #F2F2F2;
+}
+
+/*****Layout******/
+
+.span_1_of_2, .span_2_of_2, .span_3_of_10, .span_7_of_10 {
+  width: 100%;
+  float: left;
+  padding: 10px 15px;
+}
+
+.row {
+  margin: 0 -15px;
+  display: block;
+}
+
+.row:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+/*****Media Queries******/
+
+@media(min-width: 992px) {
+  #foodmenu .menu {
+    width: 45%;
+  }
+
+  .span_1_of_2 {
+    width: 50%;
+  }
+
+  .span_3_of_10 {
+    width: 30%;
+  }
+
+  .span_7_of_10 {
+    width: 70%;
+  }
+
+  nav {
+    margin-top: 5rem;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  .wrap {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  #privacypolicylinks {
+    float: right;
+  }
+
+}

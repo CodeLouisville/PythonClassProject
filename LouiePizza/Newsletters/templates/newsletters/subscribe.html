@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- Mail List -->
+<section id="nwsltr" class="nwsltr">
+    <div class="wrap">
+        <h2>Join Louie's List today, and get a free slice!</h2>
+        
+        <form action="/#my-handling-form-page" method="post">
+            <label class="nwsltr-label">Email</label>
+            <div class="row">
+                <div class="span_7_of_10">
+                    <input class="nwsltr-input" type="email" placeholder="jsmith@gmail.com" id="email-field">
+                    <p class="validation-message" id="email-validation-message">Must be a valid email address.</p>
+                </div>
+                <div class="span_3_of_10">
+                    <button class="nwsltr-btn" id="email-submit" type="submit" >Sign Up</button>
+                </div>
+            </div>
+        </form>
+
+        <p class="small-txt">We promise not to SPAM you, unless you want it on your pie! Data charges may apply if your still using dial-up or AOL.</p>
+    </div>
+</section>
+<!-- /Mail List -->
+{% endblock content %}

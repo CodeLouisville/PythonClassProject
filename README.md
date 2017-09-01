@@ -1,62 +1,97 @@
-# Week 2 Challenge Code Louisville 2017 Python/Django Cohort
+# Week 3 Challenge Code Louisville 2017 Python/Django Cohort
+Basic Django Project for the Fall 2017 Python Cohort serving the site from FEWD and extending functionality. LouiePizza contains the full Django project.
 
-The last challenge focused on using standard Python functions and datastructures to allow a user to build a menu from the command line. What if however a user needed to be able to create menus for multiple restaurants, and what if those restaurants each had different setups? Our data structures and functions could quickly become deeply nested and overly complex. This week we will introduce and use Classes to help manage some of that complexity.
+For the original FEWD project see https://github.com/CodeLouisville/May2017-FEWD-Class-Project
 
-## Challenge:
-Louies Pizza is growing. It now has sit down, drive thru, carry out and delivery locations. Create a command line script that allows a user to create an instance of their restaurant while keeping in mind that not every restaurant will have the same needs. Along with this each location should be able to create a menu with all the functionality from week 1 specific to their location.
+# Challenge
+The Code Louisville Louies Pizza FEWD project served content on one page. Let's break the various pieces of content (Newsletter, Menu, Contact, Homepage) into separate pages that we can use to learn more about Django. Each page should take advantage of the Django templating engine and inherited layouts with block content. 
 
-Restaurant Requirements:
-Name
-Address
-Type
+The Homepage should be a simple landing page with Louie Pizza's history and operational links to the other pages.
 
-Each type of location will then have specific data associated with it:
-Drive Thru: 
-Number of lanes
-Number of Windows (1 or 2 for payment and handing out food)
+The Newsletter should be it's own page and use the javascript email validation from the FEWD project, but is not functional beyond that at this point.
 
-Delivery:
-Driver Count
-Delivery Radius
-Dispatch Time - function that captures when the last driver left
+The Menu should be populated via Django models and categories/menu items should be added and managed via the Django Admin console.
 
-Carry Out:
-Register Count
+Finally the contact page will not be available and will be setup at a later time using Django Forms.
 
-Dine In:
-Table Count
-Waiter Count
-Register Count
+# Setup Python:
+https://www.python.org/downloads/
+For Linux/MacOS you can use apt/yum or brew to install also.
 
-A user should also be able to update any of the values for their location as well as quickly view them.
+I would highly recommend using virtual environments for your python projects. To make that easy you can:
 
-## Tips:
-[Classes](https://docs.python.org/3/tutorial/classes.html)
+    pip virtualenv env
 
-    class Location(object):
-        def __init__(self, name, address, location_type):
-            self.name = name
-            self.address = address
-            self.location_type = location_type
-            self.menu = {}
+To activate the virtual environment in your console enter:
 
-        def show_menu(self):
-            print(self.menu)
+    activate env or source activate env
 
-[Inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance)
+And to deactivate:
 
-    class Carry_Out_Location(Location):
-        def __init__(self, name, address, location_type, register_count):
-            super().__init__(name, address, location_type)
-            self.register_count = register_count
+    deactivate or source deactivate
 
-        def __str__(self):
-            print(self.name)
+## Django project setup
+The official Django documentation can be found here:
+https://docs.djangoproject.com/en/1.11/
 
-You built a function based solution for storing menus last week. Look at adding that functionality as methods on your parent location class so that all locations can create a menu without duplicating your menu functionality 4 times. 
+The official Django intro tutorial can be found here, but our project is a little different:
+https://docs.djangoproject.com/en/1.11/intro/tutorial01/
 
-## Solution
-There are a variety of ways to approach this problem in Python each with it's own merits and complexities. For one example see the locations.py solution in this project.
+In your terminal activate your virtual environment and install Django:
 
-## Additional Notes
-test_instances.txt contains a set of example instances you can put in start.py to prevent starting with no data/instances each time you run the script.
+    pip install django 
+
+If you want to check if django is installed from the terminal:
+
+    python -m django --version
+
+Once you have Django installed navigate to your project directory in the command line/terminal and once you are in your project directory start your Django project by entering the command:
+
+    django-admin startproject LouiePizza
+
+In your python project directory you should now see a django project directory called LouiePizza and a manage.py file. Your LouiePizza project folder should have a subfolder named LouiePizza as well as some key Python files:
+
+ - \__init__.py
+ - settings.py
+ - urls.py
+ - wsgi.py
+
+Finally lets start the built in Django web server and make sure you can access your site locally.
+
+    python manage.py runserver
+
+You are now ready to take what you have learned from the Django Treehouse modules and convert the FEWD content to be served via the Django backend.
+
+# Solution
+**Before proceeding it is suggested you have completed the Python, Python OOP, HTTP and Django Basics courses on treehouse**
+
+You should have the [Code Louisville FEWD Project Content](https://github.com/CodeLouisville/May2017-FEWD-Class-Project) readily available to use for your static content (HTML, CSS, Images) and Javascript. If you have followed the Django setup instructions your will also have a project started where you can add your 
+
+In your parent Django Directory you should begin by creating two HTML pages. One for the homepage, and one that will be a layout template with the header and footer content that all pages will inherit from.
+
+Next we can create a Menu and Newsletter app for us to handle Louie Pizza's menu and newsletter functionality.
+
+Within the Menus app view you should have a content block that will show each category on the menu, and for that category each related item. To accomplish this you can create a model for menu items and a model for categories with a foreign key association. Categories are the parent model and items are the child model. Once you have your models setup make sure to run your migration script and then using the Django Admin setup your menu categories and items. Finally in your view make use of Python script blocks and Django Models to expose the data you added in the Menus view.
+
+One you have this app setup make sure to configure the appropriate URL routing with urls.py/views.py and add the app to settings.py. Start the web server and test that the menus page loads with the correct content and layout.
+
+Within the Newsletters page you should have a content block with the newsletter subscription section from the original FEWD project. It should make use of the javascript email validation script that it was previously using, but as of now does not actually capture the email address.
+
+As with the menus app setup your newsletters app routing and test that the page loads as expected.
+
+# Running the project
+If you just want to run the project (assuming Python is on your system and virtualenv) in your terminal:
+
+    git clone https://github.com/AlexHagerman/code_louisville_django.git
+    cd code_louisville_django
+    virtualenv env
+    activate env
+    pip install -r requirements.txt
+    python manage.py migrate
+    python manage.py runserver
+
+And navigate to 127.0.0.1:8000 in your browser
+When you are ready to shutdown the server and exit the environment:
+
+    ctrl+c
+    exit
