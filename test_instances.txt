@@ -1,0 +1,20 @@
+    restaurants['lou_deliv'] = restaurant.Delivery_Restaraunt(name='Louies Delivery', 
+                                                              address='101 E Mos Espa',
+                                                              location_type = 4,
+                                                              driver_count = 4,
+                                                              delivery_radius = 10)
+    restaurants['lou_carry'] = restaurant.Carry_Out_Restaraunt(name='Louies Carry Out', 
+                                                               address='78 Bespin Dr',
+                                                               location_type = 1,
+                                                               register_count = 2)
+    restaurants['lou_drive'] = restaurant.Drive_Thru_Restaraunt(name='Louies Drive Thrue', 
+                                                                address='1 Rogue Way',
+                                                                location_type = 3,
+                                                                lane_count = 2,
+                                                                window_count = 1)
+    restaurants['lou_in'] = restaurant.Dine_In_Restaraunt(name='Louies Dine In', 
+                                                          address='501 East 66th St',
+                                                          location_type = 2,
+                                                          waiter_count = 10,
+                                                          table_count = 30,
+                                                          register_count = 3)
