@@ -17,7 +17,7 @@ Finally the contact page will not be available and will be setup at a later time
 # Set Up Python:
 [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-For Linux/MacOS you can use apt/yum or [brew to install](http://docs.python-guide.org/en/latest/starting/install3/osx/) also.
+For Linux you can use apt/yum and on a Mac you can use [brew to install](http://docs.python-guide.org/en/latest/starting/install3/osx/) Python.
 
 ## Virtual Environments
 We highly recommend using virtual environments for your python projects. Virtual environments isolates Python environments, including their dependencies, which means that if you install different versions of packages (which are dependencies, like Django) for different projects, they will not affect each other.
@@ -29,7 +29,7 @@ You install `virtualenv` using `pip`. `pip` is a tool included with Python that 
 
 Virtual environments are stored as regular directories, and it's common practice to create a folder named `virtualenvs` in your home folder or any other folder where you keep your programs.
 
-OS X `virtualenvs` directory creation:
+Mac/Linux `virtualenvs` directory creation:
 
     mkdir ~/.virtualenvs
 _Note: Directories starting with a `.` won't show up in the Finder GUI._
@@ -42,7 +42,7 @@ _Note: Directories starting with a `.` won't show up in the Windows GUI._
 
 Once you have a directory to store your virtual environments, you can create a new virtual environment for Louie Pizza:
 
-OS X:
+Mac/Linux:
 
     virtualenv -p python3 ~/.virtualenvs/louie_pizza
 
@@ -55,7 +55,7 @@ You will need to activate your virtual environment every time you open a new con
 
 To activate the virtual environment in your console:
 
-OS X:
+Mac/Linux:
     
     source ~/.virtualenvs/louie_pizza/bin/activate
 
@@ -66,6 +66,9 @@ Windows:
 And to deactivate:
 
     deactivate
+
+### `virtualenvwrapper`
+If you feel like a virtual environment pro, you may want to install [`virtualenvwrapper`](http://virtualenvwrapper.readthedocs.io/en/latest/). `virtualenvwrapper` adds some convenience scripts for working with virtual environments. `virtualenvwrapper` obscures some of the details of virtual environments, so don't use it unless you're completely comfortable with how virtual environments work, otherwise it may make them seem to magical.
 
 ## Django project setup
 Have you set up a virtual environment? If not, follow the directions above or ask a mentor for help!
@@ -132,12 +135,13 @@ As with the menus app setup your newsletters app routing and test that the page 
 # Running the project
 If you just want to run the project (assuming Python is on your system and virtualenv) in your terminal:
 
-    git clone https://github.com/AlexHagerman/code_louisville_django.git
-    cd code_louisville_django
+    git clone https://github.com/CodeLouisville/PythonClassProject.git
+    cd PythonClassProject
+    git checkout week_3
     virtualenv env
-    activate env
+    source env/bin/activate (Mac/Linux) / source env/Scripts/activate (Windows)
     pip install -r requirements.txt
-    python manage.py migrate
+    cd louie_pizza
     python manage.py runserver
 
 And navigate to 127.0.0.1:8000 in your browser
