@@ -18,17 +18,48 @@ Finally the contact page will not be available and will be setup at a later time
 https://www.python.org/downloads/
 For Linux/MacOS you can use apt/yum or brew to install also.
 
-I would highly recommend using virtual environments for your python projects. To make that easy you can:
+We highly recommend using virtual environments for your python projects. Virtual environments isolates Python environments, including their dependencies, which means that if you install different versions of packages (which are dependencies, like Django) for different projects, they will not affect each other.
 
-    pip virtualenv env
+You install `virtualenv` using `pip`. `pip` is a tool included with Python that installs Python packages from the Python Package Index, an online repository of Python packages:
 
-To activate the virtual environment in your console enter:
+    pip install virtualenv
 
-    activate env or source activate env
+Virtual environments are stored as regular directories, and it's common practice to create a folder named `virtualenvs` in your home folder or any other folder where you keep your programs.
+
+OS X `virtualenvs` directory creation:
+
+    mkdir ~/.virtualenvs
+_Note: Directories starting with a `.` won't show up in the Finder GUI._
+
+Windows `virtualenvs` directory creation:
+
+    cd %HOMEPATH%
+    mkdir .virtualenvs
+_Note: Directories starting with a `.` won't show up in the Windows GUI._
+
+Once you have a directory to store your virtual environments, you can create a new virtual environment for Louie Pizza:
+
+OS X:
+
+    virtualenv -p python3 ~/.virtualenvs/louiepizza
+
+Windows:
+
+    virtualenv -p python3 %HOMEPATH%\.virtualenvs\louiepizza
+
+To activate the virtual environment in your console:
+
+OS X:
+    
+    source ~/.virtualenvs/louiepizza/bin/activate
+
+Windows:
+
+    source %HOMEPATH%\.virtualenvs\louiepizza\Scripts\activate
 
 And to deactivate:
 
-    deactivate or source deactivate
+    deactivate
 
 ## Django project setup
 The official Django documentation can be found here:
@@ -61,6 +92,17 @@ Finally lets start the built in Django web server and make sure you can access y
     python manage.py runserver
 
 You are now ready to take what you have learned from the Django Treehouse modules and convert the FEWD content to be served via the Django backend.
+
+**Advanced project layout**
+If you are feeling adventurous, you can use a more advanced project layout with your Django project. The one we'd recommend is from the authors of Two Scoops of Django. To use it, you'll need to install `cookiecutter`:
+
+    pip install cookiecutter
+
+To set up the project layout, run the following command and answer the questions:
+
+    cookiecutter https://github.com/pydanny/cookiecutter-django
+
+The Two Scoops of Django project layout isn't required, but it's more like what you'd see in a professional Django project.
 
 # Solution
 **Before proceeding it is suggested you have completed the Python, Python OOP, HTTP and Django Basics courses on treehouse**
