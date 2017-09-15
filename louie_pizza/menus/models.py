@@ -9,7 +9,7 @@ class MenuItemType(models.Model):
 class MenuItem(models.Model):
     name = models.CharField(max_length=255)
     price = models.DecimalField(decimal_places=2, max_digits=10)
-    item_type = models.ForeignKey(MenuItemType)
+    item_type = models.ForeignKey(MenuItemType, related_name='items')
 
     def __str__(self):
         return self.name

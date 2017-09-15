@@ -17,13 +17,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                {% for item in items %}
-                {% if item.item_type_id == category.id %}
+                {% for item in category.items.all %}
                     <tr>
                         <td>{{ item.name }}</td>
                         <td class="menu-price text-right">${{ item.price }}</td>
                     </tr>
-                {% endif %}
                 {% endfor %}
                 </tbody>
             {% endfor %}
