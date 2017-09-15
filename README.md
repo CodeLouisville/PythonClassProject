@@ -1,5 +1,5 @@
 # Week 3 Challenge Code Louisville 2017 Python/Django Cohort
-Basic Django Project for the Fall 2017 Python Cohort serving the site from FEWD and extending functionality. LouiePizza contains the full Django project.
+Basic Django Project for the Fall 2017 Python Cohort serving the site from FEWD and extending functionality. louie\_pizza contains the full Django project.
 
 For the original FEWD project see https://github.com/CodeLouisville/May2017-FEWD-Class-Project
 
@@ -14,12 +14,15 @@ The Menu should be populated via Django models and categories/menu items should 
 
 Finally the contact page will not be available and will be setup at a later time using Django Forms.
 
-# Setup Python:
-https://www.python.org/downloads/
-For Linux/MacOS you can use apt/yum or brew to install also.
+# Set Up Python:
+[https://www.python.org/downloads/](https://www.python.org/downloads/)
 
+For Linux/MacOS you can use apt/yum or [brew to install](http://docs.python-guide.org/en/latest/starting/install3/osx/) also.
+
+## Virtual Environments
 We highly recommend using virtual environments for your python projects. Virtual environments isolates Python environments, including their dependencies, which means that if you install different versions of packages (which are dependencies, like Django) for different projects, they will not affect each other.
 
+### Install `virtualenv`
 You install `virtualenv` using `pip`. `pip` is a tool included with Python that installs Python packages from the Python Package Index, an online repository of Python packages:
 
     pip install virtualenv
@@ -41,27 +44,32 @@ Once you have a directory to store your virtual environments, you can create a n
 
 OS X:
 
-    virtualenv -p python3 ~/.virtualenvs/louiepizza
+    virtualenv -p python3 ~/.virtualenvs/louie_pizza
 
 Windows:
 
-    virtualenv -p python3 %HOMEPATH%\.virtualenvs\louiepizza
+    virtualenv -p python3 %HOMEPATH%\.virtualenvs\louie_pizza
+
+### Activate `virtualenv`
+You will need to activate your virtual environment every time you open a new console. If you don't, `python` will use your system Python and its packages, not the `python` and packages in your virtual environment.
 
 To activate the virtual environment in your console:
 
 OS X:
     
-    source ~/.virtualenvs/louiepizza/bin/activate
+    source ~/.virtualenvs/louie_pizza/bin/activate
 
 Windows:
 
-    source %HOMEPATH%\.virtualenvs\louiepizza\Scripts\activate
+    source %HOMEPATH%\.virtualenvs\louie_pizza\Scripts\activate
 
 And to deactivate:
 
     deactivate
 
 ## Django project setup
+Have you set up a virtual environment? If not, follow the directions above or ask a mentor for help!
+
 The official Django documentation can be found here:
 https://docs.djangoproject.com/en/1.11/
 
@@ -78,9 +86,9 @@ If you want to check if django is installed from the terminal:
 
 Once you have Django installed navigate to your project directory in the command line/terminal and once you are in your project directory start your Django project by entering the command:
 
-    django-admin startproject LouiePizza
+    django-admin startproject louie_pizza
 
-In your python project directory you should now see a django project directory called LouiePizza and a manage.py file. Your LouiePizza project folder should have a subfolder named LouiePizza as well as some key Python files:
+In your python project directory you should now see a django project directory called louie\_pizza and a manage.py file. Your louie\_pizza project folder should have a subfolder named louie\_pizza as well as some key Python files:
 
  - \__init__.py
  - settings.py
