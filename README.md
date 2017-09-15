@@ -1,5 +1,5 @@
 # Week 3 Challenge Code Louisville 2017 Python/Django Cohort
-Basic Django Project for the Fall 2017 Python Cohort serving the site from FEWD and extending functionality. LouiePizza contains the full Django project.
+Basic Django Project for the Fall 2017 Python Cohort serving the site from FEWD and extending functionality. louie\_pizza contains the full Django project.
 
 For the original FEWD project see https://github.com/CodeLouisville/May2017-FEWD-Class-Project
 
@@ -14,23 +14,65 @@ The Menu should be populated via Django models and categories/menu items should 
 
 Finally the contact page will not be available and will be setup at a later time using Django Forms.
 
-# Setup Python:
-https://www.python.org/downloads/
-For Linux/MacOS you can use apt/yum or brew to install also.
+# Set Up Python:
+[https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-I would highly recommend using virtual environments for your python projects. To make that easy you can:
+For Linux you can use apt/yum and on a Mac you can use [brew to install](http://docs.python-guide.org/en/latest/starting/install3/osx/) Python.
 
-    pip virtualenv env
+## Virtual Environments
+We highly recommend using virtual environments for your python projects. Virtual environments isolates Python environments, including their dependencies, which means that if you install different versions of packages (which are dependencies, like Django) for different projects, they will not affect each other.
 
-To activate the virtual environment in your console enter:
+### Install `virtualenv`
+You install `virtualenv` using `pip`. `pip` is a tool included with Python that installs Python packages from the Python Package Index, an online repository of Python packages:
 
-    activate env or source activate env
+    pip install virtualenv
+
+Virtual environments are stored as regular directories, and it's common practice to create a folder named `virtualenvs` in your home folder or any other folder where you keep your programs.
+
+Mac/Linux `virtualenvs` directory creation:
+
+    mkdir ~/.virtualenvs
+_Note: Directories starting with a `.` won't show up in the Finder GUI._
+
+Windows `virtualenvs` directory creation:
+
+    cd %HOMEPATH%
+    mkdir .virtualenvs
+_Note: Directories starting with a `.` won't show up in the Windows GUI._
+
+Once you have a directory to store your virtual environments, you can create a new virtual environment for Louie Pizza:
+
+Mac/Linux:
+
+    virtualenv -p python3 ~/.virtualenvs/louie_pizza
+
+Windows:
+
+    virtualenv -p python3 %HOMEPATH%\.virtualenvs\louie_pizza
+
+### Activate `virtualenv`
+You will need to activate your virtual environment every time you open a new console. If you don't, `python` will use your system Python and its packages, not the `python` and packages in your virtual environment.
+
+To activate the virtual environment in your console:
+
+Mac/Linux:
+    
+    source ~/.virtualenvs/louie_pizza/bin/activate
+
+Windows:
+
+    source %HOMEPATH%\.virtualenvs\louie_pizza\Scripts\activate
 
 And to deactivate:
 
-    deactivate or source deactivate
+    deactivate
+
+### `virtualenvwrapper`
+If you feel like a virtual environment pro, you may want to install [`virtualenvwrapper`](http://virtualenvwrapper.readthedocs.io/en/latest/). `virtualenvwrapper` adds some convenience scripts for working with virtual environments. `virtualenvwrapper` obscures some of the details of virtual environments, so don't use it unless you're completely comfortable with how virtual environments work, otherwise it may make them seem to magical.
 
 ## Django project setup
+Have you set up a virtual environment? If not, follow the directions above or ask a mentor for help!
+
 The official Django documentation can be found here:
 https://docs.djangoproject.com/en/1.11/
 
@@ -47,9 +89,9 @@ If you want to check if django is installed from the terminal:
 
 Once you have Django installed navigate to your project directory in the command line/terminal and once you are in your project directory start your Django project by entering the command:
 
-    django-admin startproject LouiePizza
+    django-admin startproject louie_pizza
 
-In your python project directory you should now see a django project directory called LouiePizza and a manage.py file. Your LouiePizza project folder should have a subfolder named LouiePizza as well as some key Python files:
+In your python project directory you should now see a django project directory called louie\_pizza and a manage.py file. Your louie\_pizza project folder should have a subfolder named louie\_pizza as well as some key Python files:
 
  - \__init__.py
  - settings.py
@@ -61,6 +103,17 @@ Finally lets start the built in Django web server and make sure you can access y
     python manage.py runserver
 
 You are now ready to take what you have learned from the Django Treehouse modules and convert the FEWD content to be served via the Django backend.
+
+**Advanced project layout**
+If you are feeling adventurous, you can use a more advanced project layout with your Django project. The one we'd recommend is from the authors of Two Scoops of Django. To use it, you'll need to install `cookiecutter`:
+
+    pip install cookiecutter
+
+To set up the project layout, run the following command and answer the questions:
+
+    cookiecutter https://github.com/pydanny/cookiecutter-django
+
+The Two Scoops of Django project layout isn't required, but it's more like what you'd see in a professional Django project.
 
 # Solution
 **Before proceeding it is suggested you have completed the Python, Python OOP, HTTP and Django Basics courses on treehouse**
@@ -82,12 +135,13 @@ As with the menus app setup your newsletters app routing and test that the page 
 # Running the project
 If you just want to run the project (assuming Python is on your system and virtualenv) in your terminal:
 
-    git clone https://github.com/AlexHagerman/code_louisville_django.git
-    cd code_louisville_django
+    git clone https://github.com/CodeLouisville/PythonClassProject.git
+    cd PythonClassProject
+    git checkout week_3
     virtualenv env
-    activate env
+    source env/bin/activate (Mac/Linux) / source env/Scripts/activate (Windows)
     pip install -r requirements.txt
-    python manage.py migrate
+    cd louie_pizza
     python manage.py runserver
 
 And navigate to 127.0.0.1:8000 in your browser

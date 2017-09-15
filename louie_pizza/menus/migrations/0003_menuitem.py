@@ -9,7 +9,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Menus', '0002_auto_20170824_0051'),
+        ('menus', '0002_auto_20170824_0051'),
     ]
 
     operations = [
@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
                 ('price', models.FloatField()),
-                ('item_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='Menus.MenuItemType')),
+                ('item_type', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='menus.MenuItemType')),
             ],
         ),
     ]
