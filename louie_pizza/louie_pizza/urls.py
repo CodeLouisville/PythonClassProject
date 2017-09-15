@@ -1,4 +1,4 @@
-"""LouiePizza URL Configuration
+"""louie_pizza URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -20,8 +20,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 urlpatterns = [
-    url(r'^newsletters/', include('Newsletters.urls')),
-    url(r'^menus/', include('Menus.urls')),
+    url(r'^newsletters/', include('newsletters.urls')),
+    url(r'^menus/', include('menus.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
     url(r'^home/', views.index),

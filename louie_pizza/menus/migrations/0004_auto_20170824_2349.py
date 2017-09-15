@@ -8,7 +8,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Menus', '0003_menuitem'),
+        ('menus', '0003_menuitem'),
     ]
 
     operations = [
