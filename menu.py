@@ -65,21 +65,24 @@ def update_item(menu):
     try:
         for category, menu_items in menu.items():
             for menu_item in menu_items:
-                for name, price in menu_item.items():
-                    if lookup == name:
-                        updt = input("Would you like to update the price or name?\n")
-                        if updt.lower() == "name":
-                            new_name = input("What should the new name be?\n")
-                            menu_item[new_name] = menu_item.pop(name)
-                            print("Menu item name updated.")
-                            main_menu()
-                        elif updt.lower() == "price":
-                            new_price = input("What should the new price be?\n")
-                            menu_item[name] = new_price
-                            print("Menu item price updated.")
-                            main_menu()
-                        else:
-                            raise ValueError
+                if any(lookup in menu_item for menu_item in menu_items):
+                    for name, price in menu_item.items():
+                        if lookup == name:
+                            updt = input("Would you like to update the price or name?\n")
+                            if updt.lower() == "name":
+                                new_name = input("What should the new name be?\n")
+                                menu_item[new_name] = menu_item.pop(name)
+                                print("Menu item name updated.")
+                                main_menu()
+                            elif updt.lower() == "price":
+                                new_price = input("What should the new price be?\n")
+                                menu_item[name] = new_price
+                                print("Menu item price updated.")
+                                main_menu()
+                            else:
+                                raise ValueError
+                else:
+                    raise KeyError
     except KeyError:
         print("That menu item does not exist yet, you can add it though.\n")
         main_menu()
