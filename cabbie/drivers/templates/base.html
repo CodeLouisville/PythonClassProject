@@ -1,0 +1,22 @@
+{% load static from staticfiles %}
+
+<!doctype html>
+<html>
+<head>
+	<title>
+		Code Lou 2017
+	</title>
+	<link rel='stylesheet' href='{% static "css/layout.css" %}'>
+	{% block static %}{% endblock %}
+</head>
+<body>
+	<div class='container'>
+		<a href='/'>Home</a>
+		<a href='/drivers/'>Drivers</a>
+		<a href='/drivers/test'>Test</a>
+	</div>
+
+	{% block content %}{% endblock %}
+
+</body>
+</html>

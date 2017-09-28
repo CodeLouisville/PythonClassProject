@@ -1,0 +1,16 @@
+{% load drivers_extras %}
+{% load static from staticfiles %}
+
+{% if display %}
+<h3>It's all gone! Great Job</h3>
+
+<div class='image-wrap'>
+	{% for i in 5|times %}
+		<img src='{% static "img/star64x64.png" %}'>
+	{% endfor %}
+</div>
+{% elif almostthere %}
+<h3>It's getting close!</h3>
+{% else %}
+<h3>Still some left</h3>
+{% endif %}

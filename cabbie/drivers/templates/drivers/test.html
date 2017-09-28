@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block static %}
+	<link rel='stylesheet' href='{% static "drivers/css/drivers.css" %}'>
+{% endblock %}
+
+{% block content %}
+
+	<h1>Button Test</h1>
+
+	<div class='hit-button-wrap'><a class='hit-button' href='{% url "drivers:counter" %}'>Don't Touch</a></div>
+
+{% endblock %}

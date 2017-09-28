@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load drivers_extras %}
+
+{% block static %}
+	<link rel='stylesheet' href='{% static "drivers/css/drivers.css" %}'>
+{% endblock %}
+
+{% block content %}
+	<div id='content'>
+		<h2>How many clicks does it take to reach the center of a tootsie pop?</h2>
+		
+		<div class='counter-text'>
+			You have made {{ counter }} hits
+		</div>
+		<div class='hit-button-wrap'><a class='hit-button' href='{% url "drivers:counter" %}'>Hit Me!</a></div>
+		<div>{% every_five %}</div>
+		<div>{% success_tag %}</div>
+	</div>
+
+{% endblock %}

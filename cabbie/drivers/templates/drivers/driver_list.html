@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for driver in drivers %}
+	{{ driver }}<br>
+		<ul>
+		{% for description in driver.descriptions.all %}
+			<li> {{ description }} </li>
+		{% endfor %}
+		</ul>
+{% endfor %}
+
+{% endblock %}
