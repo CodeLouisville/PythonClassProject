@@ -1,17 +1,17 @@
-$('#email-field').keyup(function(){
-  if(this.value !== '' && !isValidEmailAddress(this.value)) {
-    $('#email-validation-message').show();
-    $('#email-submit').prop('disabled', true);
-  } else {
-    $('#email-validation-message').hide();
-    $('#email-submit').prop('disabled', false);
-  }
-});
+// $('#email-field').keyup(function(){
+//   if(this.value !== '' && !isValidEmailAddress(this.value)) {
+//     $('#email-validation-message').show();
+//     $('#email-submit').prop('disabled', true);
+//   } else {
+//     $('#email-validation-message').hide();
+//     $('#email-submit').prop('disabled', false);
+//   }
+// });
 
-$('#email-submit').click(function(e){
-  e.preventDefault();
-  alert('Server unavaliable, try again later!');
-});
+// $('#email-submit').click(function(e){
+//   e.preventDefault();
+//   alert('Server unavaliable, try again later!');
+// });
 
 //Checks if email address is valid.  
 function isValidEmailAddress(emailAddress) {

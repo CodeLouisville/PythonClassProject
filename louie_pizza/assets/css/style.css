@@ -161,6 +161,12 @@ nav a:hover {
   margin: .5rem 0;
 }
 
+.unsub {
+  color: #871719;
+  font-weight: 700;
+
+}
+
 /****** Food Menu ******/
 #foodmenu {
   display: flex;

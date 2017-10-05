@@ -1,7 +1,8 @@
 from django.conf.urls import url
 
-from . import views
+from .views import subscribe, unsubscribe
 
 urlpatterns = [
-    url(r'^$', views.subscribe),
+    url(r'signup/$', subscribe, name="subscribe"),
+    url(r'unsubscribe/$', unsubscribe, name="unsubscribe"),
 ]

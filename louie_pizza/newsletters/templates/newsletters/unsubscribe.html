@@ -4,23 +4,22 @@
 <!-- Mail List -->
 <section id="nwsltr" class="nwsltr">
     <div class="wrap">
-        <h2>Join Louie's List today, and get a free slice!</h2>
+        <h2>Sorry to see you go!</h2>
         
         <form action="" method="POST">{% csrf_token %} <!-- remember the _ -->
             <label class="nwsltr-label">Email</label>
             <div class="row">
                 <div class="span_7_of_10">
-                    <input class="nwsltr-input" placeholder="smith@gmail.com" type="email" id="email-field" name="email" maxlength="254" required id="id_email" />
+                        <input class="nwsltr-input" placeholder="smith@gmail.com" type="email" id="email-field" name="email" maxlength="254" required id="id_email" />
                     <p class="validation-message" id="email-validation-message">Must be a valid email address.</p>
                 </div>
                 <div class="span_3_of_10">
-                    <button class="nwsltr-btn" id="email-submit" type="submit" >Subscribe</button>
+                    <button class="nwsltr-btn" id="email-submit" type="submit" >Unsubscribe</button>
                 </div>
             </div>
         </form>
 
-        <p class="small-txt">We promise not to SPAM you, unless you want it on your pie! Data charges may apply if your still using dial-up or AOL.</p>
-        <p class="small-txt">If you want to unsubscribe click <a class="unsub" href="\newsletters\unsubscribe">here</a></p>
+        <p class="small-txt">We promise to immediately remove you from our newsletter mailing list.</p>
     </div>
 </section>
 <!-- /Mail List -->

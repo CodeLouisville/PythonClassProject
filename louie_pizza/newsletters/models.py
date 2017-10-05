@@ -1,9 +1,8 @@
 from django.db import models
 
 class Subscriber(models.Model):
-    subscribed_at = models.DateTimeField(auto_now_add=True)
-    name = models.CharField(max_length=255)
-    email = models.TextField()
+    date_subscribed = models.DateTimeField(auto_now_add=True)
+    email = models.EmailField()
 
     def __str__(self):
-        return self.name
+        return self.email

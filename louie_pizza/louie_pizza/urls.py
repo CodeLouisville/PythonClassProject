@@ -21,7 +21,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 urlpatterns = [
-    url(r'^newsletters/', include('newsletters.urls')),
+    url(r'^newsletters/', include('newsletters.urls', app_name='newsletters', namespace='newsletters')),
     url(r'^menus/', include('menus.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index),
