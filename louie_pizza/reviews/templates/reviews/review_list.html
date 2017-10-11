@@ -4,7 +4,10 @@
 <h1 class="page-header">Reviews: </h1>
 <div class="row placeholders">
 	{% for review in reveiws %}
+		<div>
 		{{ review.title }}
+		</div>
 	{% endfor %}
 </div>
+<li><a class="unsub" href="{% url 'reviews:create' %}">Add a Review</a></li>
 {% endblock %}

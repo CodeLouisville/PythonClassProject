@@ -4,5 +4,5 @@
 <h1>{{ review.name  }}</h1>
 <p class="muted">{{ review.email }}</p>
 <p>Title: <strong>{{ review.title }}</strong></p>
-
+<p><a href="{% url 'reviews:update' pk=review.pk %}" class="btn">Edit</a></p>
 {% endblock %}
