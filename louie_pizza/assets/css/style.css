@@ -191,6 +191,30 @@ nav a:hover {
     text-align: right;
 }
 
+/******* Reviews *******/
+.review-lbl {
+  border-radius: 3px;
+  color: #871719;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 40px;
+}
+
+.review-btn {
+  display: block;
+  width: 10%;
+  background-color: #871719;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-family: 'Roboto Slab', serif;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 40px;
+}
+
 /*****Footer******/
 footer {
     background-color: #333333;
