@@ -5,11 +5,11 @@ from .models import Review
 
 def review_list(request):
     reviews = Review.objects.all()
-    return render(request, 'reviews/reviews_list.html', {'reviews': reviews})
+    return render(request, 'reviews/review_list.html', {'reviews': reviews})
 
 def review_detail(request, pk):
     review = get_object_or_404(Review, pk=pk)
-    return render(request, 'reviews/reviews_detail.html', {'review': review})
+    return render(request, 'reviews/review_detail.html', {'review': review})
 
 class ReviewListView(ListView):
     context_object_name = 'reviews'
