@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1 class="page-header">Reviews: </h1>
+<div class="row placeholders">
+	{% for review in reveiws %}
+		{{ review.title }}
+	{% endfor %}
+</div>
+{% endblock %}
