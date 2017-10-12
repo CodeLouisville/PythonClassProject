@@ -5,7 +5,6 @@ from .models import Review
 
 def review_list(request):
     reviews = Review.objects.all()
-    print(reviews)
     return render(request, 'reviews/review_list.html', {'reviews': reviews})
 
 def review_detail(request, pk):
@@ -18,7 +17,6 @@ class ReviewListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ReviewListView, self).get_context_data(**kwargs)
-        print(context['reviews'])
         return context
 
 class ReviewDetailView(DetailView):
