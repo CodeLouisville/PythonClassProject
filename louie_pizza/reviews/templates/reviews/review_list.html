@@ -3,11 +3,11 @@
 {% block content %}
 <h1 class="page-header">Reviews: </h1>
 <div class="row placeholders">
-	{% for review in reveiws %}
-		<div>
-		{{ review.title }}
+	{% for review in reviews %}
+		<div class='review-list-row'>
+		{{ review }}
 		</div>
 	{% endfor %}
 </div>
-<li><a class="review-lbl" href="{% url 'reviews:create' %}">Add a Review</a></li>
+<li style='padding:20px 50px;'><a class="review-lbl" href="{% url 'reviews:create' %}">Add a Review</a></li>
 {% endblock %}

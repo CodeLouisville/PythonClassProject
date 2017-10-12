@@ -14,6 +14,7 @@ h1, h2 {
     font-family: 'Roboto Slab', serif;
     text-transform: uppercase;
     margin: 1em 0;
+    text-align:center;
 }
 
 h1 {
@@ -204,7 +205,7 @@ nav a:hover {
 
 .review-btn {
   display: block;
-  width: 10%;
+  width: 100px;
   background-color: #871719;
   border-radius: 3px;
   color: #FFFFFF;
@@ -213,6 +214,31 @@ nav a:hover {
   text-transform: uppercase;
   font-weight: bold;
   height: 40px;
+  margin-right: 30px;
+}
+
+.review-btn-a {
+  display: block;
+  width: 100px;
+  background-color: #871719;
+  border-radius: 3px;
+  color: #FFFFFF;
+  font-family: 'Roboto Slab', serif;
+  font-size: .8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border:2px outset buttonface;
+  padding: 10.5px 0;
+  margin: 0 30px;
+}
+
+.review-list-row {
+  width: calc(100% - 50px);
+  padding-left: 50px;
+  margin: 10px 0;
+  font-weight:bold;
+  font-size:110%;
 }
 
 /*****Footer******/
