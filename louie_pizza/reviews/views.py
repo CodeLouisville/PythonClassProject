@@ -17,6 +17,9 @@ class ReviewListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ReviewListView, self).get_context_data(**kwargs)
+        context['reviewlist'] = []
+        for each in context['reviews']:
+            context['reviewlist'].append({'url': each.get_absolute_url(), 'text':each})
         return context
 
 class ReviewDetailView(DetailView):

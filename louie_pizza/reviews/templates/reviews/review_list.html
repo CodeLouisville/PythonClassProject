@@ -3,9 +3,9 @@
 {% block content %}
 <h1 class="page-header">Reviews: </h1>
 <div class="row placeholders">
-	{% for review in reviews %}
+	{% for review in reviewlist %}
 		<div class='review-list-row'>
-		{{ review }}
+		<a href="{{ review.url }}" style='color:black;'>{{ review.text }}</a>
 		</div>
 	{% endfor %}
 </div>
