@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>{% if not form.instance.pk %}Submit Review{% else %}Edit {{ form.instance.name }}{% endif %}</h1>
+
+<form method='POST'>
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" class="review-btn" value="Save">
+</form>
+{% endblock %}

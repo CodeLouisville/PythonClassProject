@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Delete {{ review.title }}?</h1>
+
+<form method='POST'>
+	{% csrf_token %}
+	<input type="submit" class="review-btn" value="Delete"> <a href="\reviews" class="review-lbl">Cancel</a>
+</form>
+{% endblock %}

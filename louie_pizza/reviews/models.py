@@ -1,6 +1,7 @@
 from django.db import models
+from django.core.urlresolvers import reverse
 
-class CustomerFeedback(models.Model):
+class Review(models.Model):
     date_submitted = models.DateTimeField(auto_now_add=True)
     name = models.CharField(max_length=255)
     date_of_visit = models.DateField()
@@ -10,3 +11,6 @@ class CustomerFeedback(models.Model):
 
     def __str__(self):
         return "Message from {0}: {1}".format(self.name, self.title)
+
+    def get_absolute_url(self):
+        return reverse('reviews:detail', kwargs={'pk': self.pk})
