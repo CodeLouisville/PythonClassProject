@@ -1,0 +1,262 @@
+[
+  {
+    "model": "menus.category",
+    "pk": 1,
+    "fields": {
+      "category": "Appetizers"
+    }
+  },
+  {
+    "model": "menus.category",
+    "pk": 2,
+    "fields": {
+      "category": "Salads"
+    }
+  },
+  {
+    "model": "menus.category",
+    "pk": 3,
+    "fields": {
+      "category": "Sandwhiches"
+    }
+  },
+  {
+    "model": "menus.category",
+    "pk": 4,
+    "fields": {
+      "category": "Classic Pizzas"
+    }
+  },
+  {
+    "model": "menus.category",
+    "pk": 5,
+    "fields": {
+      "category": "Specialty Pizzas"
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 1,
+    "fields": {
+      "name": "Louie's Chef Salad",
+      "price": "7.50",
+      "category": 2
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 2,
+    "fields": {
+      "name": "Caesar Salad",
+      "price": "9.00",
+      "category": 2
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 3,
+    "fields": {
+      "name": "Garden Salad",
+      "price": "6.25",
+      "category": 2
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 4,
+    "fields": {
+      "name": "Side Salad",
+      "price": "3.50",
+      "category": 2
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 5,
+    "fields": {
+      "name": "Mozzarella Cheese Sticks",
+      "price": "4.25",
+      "category": 1
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 6,
+    "fields": {
+      "name": "Garlic Bread with Cheese",
+      "price": "5.00",
+      "category": 1
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 7,
+    "fields": {
+      "name": "Breadsticks (6)",
+      "price": "4.25",
+      "category": 1
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 8,
+    "fields": {
+      "name": "Family Breadsticks (12)",
+      "price": "6.50",
+      "category": 1
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 9,
+    "fields": {
+      "name": "Garlic Knots",
+      "price": "5.00",
+      "category": 1
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 10,
+    "fields": {
+      "name": "Jalapeno Poppers",
+      "price": "4.00",
+      "category": 1
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 11,
+    "fields": {
+      "name": "Steak Hoagie",
+      "price": "4.35",
+      "category": 3
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 12,
+    "fields": {
+      "name": "Stromboli Sub",
+      "price": "5.00",
+      "category": 3
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 13,
+    "fields": {
+      "name": "Meatball Sub",
+      "price": "4.25",
+      "category": 3
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 14,
+    "fields": {
+      "name": "Roast Beef Sub",
+      "price": "6.50",
+      "category": 3
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 15,
+    "fields": {
+      "name": "Barbeque Chicken Sub",
+      "price": "5.00",
+      "category": 3
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 16,
+    "fields": {
+      "name": "Jalepeno Poppers",
+      "price": "4.00",
+      "category": 3
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 17,
+    "fields": {
+      "name": "Bacon Cheddar Ham",
+      "price": "12.75",
+      "category": 5
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 18,
+    "fields": {
+      "name": "Bacon Cheeseburger",
+      "price": "11.50",
+      "category": 5
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 19,
+    "fields": {
+      "name": "Taco Pizza",
+      "price": "12.00",
+      "category": 5
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 20,
+    "fields": {
+      "name": "Chicken Fajita",
+      "price": "11.25",
+      "category": 5
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 21,
+    "fields": {
+      "name": "Pepperoni",
+      "price": "9.00",
+      "category": 4
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 22,
+    "fields": {
+      "name": "Cheese",
+      "price": "8.00",
+      "category": 4
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 23,
+    "fields": {
+      "name": "Sausage",
+      "price": "9.00",
+      "category": 4
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 24,
+    "fields": {
+      "name": "Meat Lover's",
+      "price": "12.00",
+      "category": 4
+    }
+  },
+  {
+    "model": "menus.item",
+    "pk": 25,
+    "fields": {
+      "name": "Supreme",
+      "price": "12.75",
+      "category": 4
+    }
+  }
+]

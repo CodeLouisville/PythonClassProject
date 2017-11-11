@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1 class="page-header">Reviews: </h1>
+<div class="row placeholders">
+	{% for review in reviewlist %}
+		<div class='review-list-row'>
+		<a href="{{ review.url }}" style='color:black;'>{{ review.text }}</a>
+		</div>
+	{% endfor %}
+</div>
+<li style='padding:20px 50px;'><a class="review-lbl" href="{% url 'reviews:create' %}">Add a Review</a></li>
+{% endblock %}

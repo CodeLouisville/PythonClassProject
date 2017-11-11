@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>{% if not form.instance.pk %}Submit Review{% else %}Edit {{ form.instance.name }}{% endif %}</h1>
+
+<form method='POST' style='padding:0px 50px 30px;'>
+	{% csrf_token %}
+	{{ form.as_p }}
+	<div style='display:flex;'>
+		<input type="submit" class="review-btn" value="Save">
+		{% if form.instance.pk %}<a class="review-btn-a" href="{% url 'reviews:delete' pk=review.pk %}">Delete</a>{% endif %}
+	</div>
+</form>
+{% endblock %}
